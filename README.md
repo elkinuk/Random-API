@@ -5,3 +5,8 @@
 * npm start
 
 [Start](https://elkinny.github.io/random-api-task/)
+
+## Mistakes
+![mistakes](https://elkinny.github.io/random-api-task/mistakes.png)
+
+
