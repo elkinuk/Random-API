@@ -76,7 +76,7 @@ body{
         }
     }
 
-    &_display-left div{
+    &_display-left &__person{
         float: left;
         clear: none;
     }
@@ -148,10 +148,10 @@ body{
                 @include font_style($modal_font_size);
                 word-wrap: break-word;
             }
-            &-#{$el}-label{
-                font-weight: 400;
-                text-decoration: underline;
-            }
+        }
+        &-label{
+            font-weight: 400;
+            text-decoration: underline;
         }
 
         &-card{
@@ -171,5 +171,8 @@ body{
         margin: $general_margin auto;
         border: 1px solid $translucent_black;
         @extend .btn;
+        &_hidden{
+            display: none;
+        }
     }
 }
