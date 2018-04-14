@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello World!</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width = device-width, initial-scale=1" />
+</head>
+<body>
+    <header class="header"> <!--!!!!! -->
+        <div class="header__btns-block">
+            <div class="header__btns-label">Random api:</div>
+            <button class="header__btn" id="btn-load_rapi">Load</button>
+        </div>
+        <div class="header__btns-block">
+            <div class="header__btns-label">Local storage:</div>
+            <button class="header__btn" id="btn-load_local">Load</button>
+            <button class="header__btn" id="btn-reset_local">Reset</button>
+        </div>
+        <div class="header__btns-block">
+            <button class="header__btn header__btn_remove-margin" id="btn-clear">Clear</button>
+        </div>
+    </header>
+    <main class="main main_display-left"></main> <!--!!!!! -->
+
+    <footer class="footer footer_text_center">
+        <span class="footer__coryright">(c) Coryright Blah-blah-blah</span>
+    </footer>
+
+    <div class="modal" id="modal">
+        <div class="modal__person-card">
+            <div class= "modal__person-name">
+                <span class="modal__person-name-label">Name:</span>
+                <span class="modal__person-name-text"></span>
+            </div>
+            <div class= "modal__person-email">
+                <span class="modal__person-email-label">Email:</span>
+                <span class="modal__person-email-text"></span>
+            </div>
+            <div class= "modal__person-phone">
+                <span class="modal__person-phone-label">Phone:</span>
+                <span class="modal__person-phone-text"></span>
+            </div>
+            <div class= "modal__person-location">
+                <span class="modal__person-location-label">Email:</span>
+                <span class="modal__person-location-text"></span>
+            </div>
+            <button class="modal__btn" id="btn-save_local">Save</button>
+        </div>
+    </div>
+
+    <script src="./bundle.js"></script>
+</body>
+</html>

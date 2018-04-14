@@ -1,0 +1,32 @@
+$general_margin: 10px;
+$general_padding: 10px;
+$general_font_size: 15px;
+
+$header_font_size: 18px;
+
+$btns_block_margin: 20px 0 20px 40px;
+$btn_font_size: 15px;
+$btn_margin: $general_margin;
+$btn_padding: 7px 12px;
+$btns_label_margin: 4 * $general_margin;
+$btn_modal_width: 200px;
+
+$items_margin: 2 * $general_margin;
+$items_width: 180px;
+$items_count_max: 5;
+
+$main_font_size: $general_font_size;
+$main_width: $items_width * $items_count_max + $items_margin * $items_count_max * 2;
+
+$person_pic_size: 100px;
+$person_pic_margin: $general_margin;
+$person_padding: 10px;
+
+$footer_font_size: 10px;
+$footer_hight: 30px;
+
+$modal_width: 420px;
+$modal_height: 270px;
+$modal_padding: 40px 30px;
+$modal_font_size: 19px;
+$modal_margin_top: 100px;

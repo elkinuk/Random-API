@@ -1,0 +1,183 @@
+@import 'reset';
+@import 'colors';
+@import 'sizes';
+
+@mixin font_style($size: $general_font_size, $color: $font_color_dark) {
+    font-family: Helvetica;
+    font-weight: 100;
+    font-size: $size;
+    color: $color;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.main {
+  flex: 1 0 auto;
+}
+.footer {
+  flex: 0 0 auto;
+}
+
+body{
+    background-color: $main_color;
+}
+
+.btn{
+    border-radius: 0;
+    border: 0;
+    background-color: $btn_color;
+    margin: 0 #{$btn_margin};
+    padding: $btn_padding;
+    @include font_style($btn_font_size);
+    &:hover{
+        background-color: darken($btn_color, 7%) ;
+    }
+}
+
+.header{
+    width: 100%;
+    background-color: $header_color;
+    @include font_style($header_font_size, $font_color_light);
+
+    &__btns-block{
+        display: inline-block;
+        margin: $btns_block_margin;
+
+        @media screen and (max-width: 390px) {
+            margin-left: $general_margin;
+        }
+
+    }
+
+    &__btns-label{
+        text-transform: uppercase;
+        display: inline-block;
+    }
+
+    &__btn {
+        @extend .btn;
+        &_remove-margin{
+            @media screen and (max-width: 680px) {
+                margin: 0;
+            }
+        }
+    }
+}
+
+.main{
+    width: $main_width;
+    margin: 0 auto;
+    @include font_style();
+    
+    @for $i from ($items_count_max - 1) through 1{
+    @media screen and (max-width: (($items_margin * 2 + $items_width)) * ($i + 1)) {
+            width: $main_width - ($items_count_max - $i) * ($items_margin * 2 + $items_width);
+        }
+    }
+
+    &_display-left div{
+        float: left;
+        clear: none;
+    }
+
+    &__person{
+        width: $items_width;
+        min-height: $person_pic_size + $main_font_size * 2 + $person_pic_margin * 2;
+        margin: $items_margin;
+        padding: $person_padding;
+        overflow-y: hidden;
+        background-color: $person_color;
+        transition: box-shadow 0.3s;
+
+        &:hover{
+            box-shadow: 0 0 15px $translucent_black;
+        }
+
+        &-pic{
+            width: $person_pic_size;
+            height: $person_pic_size;
+            display: block;
+            object-fit: cover;
+            margin: #{$person_pic_margin} auto;
+        }
+
+        &-name{
+            width: 100%;
+            display: inline-block;
+            word-wrap: break-word; //!!!!!!
+            text-align: center;
+        }
+    }
+
+}
+
+.footer{
+    width: 100%;
+    height: $footer_hight;
+    background-color: $footer_color;
+    clear: left;
+    @include font_style($footer_font_size, $font_color_light);
+
+    &_text_center{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $translucent_black;
+    display: none;
+
+    &__visible{
+        display: block;
+    }
+
+    &__person{
+        @each $el in name,email,phone,location{
+            &-#{$el}{
+                display: block;
+                @include font_style($modal_font_size);
+                word-wrap: break-word;
+            }
+            &-#{$el}-label{
+                font-weight: 400;
+                text-decoration: underline;
+            }
+        }
+
+        &-card{
+            width: $modal_width;
+            height: $modal_height;
+            margin: $modal_margin_top auto;
+            padding: $modal_padding;
+            background-color: $modal_color;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+    }
+    &__btn{
+        width: $btn_modal_width;
+        margin: $general_margin auto;
+        border: 1px solid $translucent_black;
+        @extend .btn;
+    }
+}
