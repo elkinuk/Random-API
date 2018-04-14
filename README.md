@@ -3,3 +3,5 @@
 * npm install
 * webpack
 * npm start
+
+[Start](https://elkinny.github.io/random-api-task/)
