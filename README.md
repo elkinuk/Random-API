@@ -25,5 +25,5 @@ $ npm start
 ```
 
 <h2 align="center">
-  <a href="https://elkinny.github.io/random-api-task/" style="color:red;">Try it now</a>
+  <a href="https://elkinny.github.io/random-api-task/">Try it now</a>
 </h2>
