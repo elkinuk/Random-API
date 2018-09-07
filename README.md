@@ -16,7 +16,7 @@
     <img src="https://forthebadge.com/images/badges/powered-by-electricity.svg">
 </p>
 
-<h1 align="center"> How to start the magic </h1>
+<h2 align="center"> How to start the magic </h2>
 
 ```sh
 $ npm install
