@@ -8,7 +8,7 @@
   <br>
 </h1>
 
-<h4 align="center">Small app, which use <a href="https://randomapi.com" target="_blank">Random API</a> functianality.</h4>
+<h4 align="center">Small app, which use <a href="https://randomapi.com" target="_blank">Random API</a> functianality</h4>
 
 <p align="center">
     <img src="https://forthebadge.com/images/badges/built-by-codebabes.svg">
